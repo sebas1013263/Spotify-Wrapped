@@ -1,11 +1,6 @@
 # Spotify Wrapped 2024 (90s Edition) 🎧
 
 
-
-https://github.com/user-attachments/assets/a5863a43-c6c7-4d60-b074-d8e9510bb16b
-
-
-
 > Una aplicación web interactiva que reinventa el Spotify Wrapped a través de la estética de los 90s y gráficos de 8 bits.
 
 ---
