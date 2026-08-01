@@ -173,7 +173,7 @@ return (
 </td> </tr> </table>
 
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```mermaid
 flowchart TD
@@ -230,65 +230,3 @@ La aplicación está construida alrededor de un controlador de secuencia central
 - **Visualización de Componentes**: Renderiza condicionalmente los componentes interactivos con transiciones de aparición gradual
 - **Hooks Personalizados**: Proporcionan efectos de sonido, manejo de audio y control de animaciones
 
-## 🔄 Flujo de Usuario
-
-```mermaid
-flowchart TD
-    User([USER]) --> Landing[Landing Page]
-    Landing --> |Press Spacebar| Welcome[Welcome Message]
-    Welcome --> UserStats[User Stats]
-    UserStats --> ArtistSpotlight[Artist Spotlight Message]
-    ArtistSpotlight --> Guess[Guess Message]
-    Guess --> ArtistQuiz[Artist Quiz]
-    
-    ArtistQuiz --> |Correct Guess| CorrectMessage[Correct Guess Message]
-    ArtistQuiz --> |Incorrect Guess| IncorrectMessage[Incorrect Guess Message]
-    
-    CorrectMessage --> TopArtists[Top Artists Reveal]
-    IncorrectMessage --> RevealMessage[Reveal Message]
-    RevealMessage --> TopArtists
-    
-    TopArtists --> Charts[Charts Message]
-    Charts --> Albums[Albums Message]
-    Albums --> Repeat[Repeat Message]
-    Repeat --> TopAlbums[Top Albums]
-    
-    TopAlbums --> Songs[Songs Message]
-    Songs --> Favorites[Favorites Message]
-    Favorites --> TopHits[Top Hits]
-    
-    TopHits --> Analysis[Analysis Message]
-    Analysis --> HitsAnalysis[Hits Analysis]
-    
-    HitsAnalysis --> ThankYou[Thank You Message]
-    ThankYou --> End([END])
-    
-    style User fill:#1C5860,stroke:#2FFD2F,color:white
-    style End fill:#1C5860,stroke:#2FFD2F,color:white
-    style Landing fill:#1C5860,stroke:#2FFD2F,color:white
-    style ArtistQuiz fill:#1C5860,stroke:#2FFD2F,color:white
-    style TopArtists fill:#1C5860,stroke:#2FFD2F,color:white
-    style TopAlbums fill:#1C5860,stroke:#2FFD2F,color:white
-    style TopHits fill:#1C5860,stroke:#2FFD2F,color:white
-    style HitsAnalysis fill:#1C5860,stroke:#2FFD2F,color:white
-```
-
-## 🚀 Primeros Pasos
-
-### 📋 Requisitos Previos
-
-- Node.js 14.x o superior
-- Gestor de paquetes npm o yarn
-- Ancho de viewport mínimo de 700px para una experiencia óptima
-
-
-
-### 📁 Estructura del Proyecto
-
-- `/app` - Directorio principal de la aplicación (Next.js App Router)
-    - `/components` - Componentes reutilizables de la interfaz
-    - `/hooks` - Hooks personalizados de React
-    - `/pages` - Componentes de página, incluyendo la experiencia del "wrapped"
-    - `/public` - Recursos estáticos como imágenes y sonidos
-    - `globals.css` - Estilos CSS globales, incluyendo animaciones
-    - `layout.tsx` - Componente de layout raíz con carga de fuentes
