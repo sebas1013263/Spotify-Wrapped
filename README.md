@@ -20,9 +20,7 @@ https://github.com/user-attachments/assets/a5863a43-c6c7-4d60-b074-d8e9510bb16b
 - [Flujo de Usuario](#-flujo-de-usuario)
 - [Primeros Pasos](#-primeros-pasos)
   - [Requisitos Previos](#-requisitos-previos)
-  - [Instalación](#-instalación)
   - [Estructura del Proyecto](#-estructura-del-proyecto)
-  - [Notas de Desarrollo](#-notas-de-desarrollo)
 
 ---
 
