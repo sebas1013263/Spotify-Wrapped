@@ -288,37 +288,7 @@ flowchart TD
 - Gestor de paquetes npm o yarn
 - Ancho de viewport mínimo de 700px para una experiencia óptima
 
-### 💾 Instalación
 
-- Clona el repositorio:
-    
-    ```bash
-    git clone https://github.com/katjpg/90s-wrapped.git
-    cd 90s-wrapped
-    ```
-    
-- Instala las dependencias:
-    
-    ```bash
-    npm install
-    # o
-    yarn install
-    ```
-    
-- Ejecuta el servidor de desarrollo:
-    
-    ```bash
-    npm run dev
-    # o
-    yarn dev
-    ```
-    
-- Abre tu navegador y ve a:
-    
-    ```
-    http://localhost:3000
-    ```
-    
 
 ### 📁 Estructura del Proyecto
 
@@ -329,11 +299,3 @@ flowchart TD
     - `/public` - Recursos estáticos como imágenes y sonidos
     - `globals.css` - Estilos CSS globales, incluyendo animaciones
     - `layout.tsx` - Componente de layout raíz con carga de fuentes
-
-### 📝 Notas de Desarrollo
-
-- La aplicación requiere un ancho de viewport mínimo de 700px
-- El cursor personalizado está habilitado por defecto y puede personalizarse en globals.css
-- Los tiempos de todas las animaciones de máquina de escribir se pueden ajustar en las constantes
-- La secuencia de componentes está definida en el tipo `SequenceState`
-- Se puede agregar contenido adicional extendiendo los estados de la secuencia
