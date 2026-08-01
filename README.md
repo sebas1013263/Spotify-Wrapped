@@ -6,63 +6,63 @@ https://github.com/user-attachments/assets/a5863a43-c6c7-4d60-b074-d8e9510bb16b
 
 
 
-> An interactive web application that reimagines Spotify Wrapped through the lens of 90s aesthetics and 8-bit graphics.
+> Una aplicación web interactiva que reinventa el Spotify Wrapped a través de la estética de los 90s y gráficos de 8 bits.
 
 ---
 
-## 📋 Table of Contents
+## 📋 Tabla de Contenidos
 
-- [Overview](#-overview)
-- [Tech Stack](#️-tech-stack)
-- [Core Features](#-core-features)
-- [Interactive UI Components](#️-interactive-ui-components)
-- [Architecture](#️-architecture)
-- [User Flow](#-user-flow)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#-prerequisites)
-  - [Installation](#-installation)
-  - [Project Structure](#-project-structure)
-  - [Development Notes](#-development-notes)
+- [Descripción general](#-descripción-general)
+- [Stack Tecnológico](#️-stack-tecnológico)
+- [Funcionalidades Principales](#-funcionalidades-principales)
+- [Componentes de UI Interactivos](#️-componentes-de-ui-interactivos)
+- [Arquitectura](#️-arquitectura)
+- [Flujo de Usuario](#-flujo-de-usuario)
+- [Primeros Pasos](#-primeros-pasos)
+  - [Requisitos Previos](#-requisitos-previos)
+  - [Instalación](#-instalación)
+  - [Estructura del Proyecto](#-estructura-del-proyecto)
+  - [Notas de Desarrollo](#-notas-de-desarrollo)
 
 ---
 
-## 📜 Overview 
-What began as an experimental year-end recap in 2016, Spotify Wrapped quickly evolved into a global tradition, inviting users from all over the world to discover their musical narrative and collectively celebrate the sounds that defined the year.
+## 📜 Descripción general
+Lo que comenzó como un resumen experimental de fin de año en 2016, Spotify Wrapped evolucionó rápidamente hasta convertirse en una tradición global, invitando a usuarios de todo el mundo a descubrir su narrativa musical y celebrar en conjunto los sonidos que definieron el año.
 
-This project serves as a creative reimagining of Spotify Wrapped and draws design inspiration from 90s aesthetics and 8-bit graphics. It also serves as a technical demonstration of how modern web development technologies can create immersive narrative-driven experiences while embracing nostalgic and retro elements. 
+Este proyecto es una reinvención creativa del Spotify Wrapped, inspirada en la estética de los 90s y los gráficos de 8 bits. También funciona como una demostración técnica de cómo las tecnologías modernas de desarrollo web pueden crear experiencias inmersivas y narrativas, sin dejar de lado elementos nostálgicos y retro.
 
-## 🛠️ Tech Stack 
-- **Frontend Framework**: Next.js 15.1.0 with React 18.2.0
-- **Styling**: TailwindCSS 3.4.1 with custom CSS animations and effects
-- **Fonts**: Google Fonts (Pixelify Sans) for retro pixel text aesthetics
-- **Data Visualization**: Recharts 2.15.0 for interactive charts and graphs
-- **State Management**: React useState and useEffect hooks for component-level state
-- **Routing**: Next.js App Router with client-side navigation
-- **Animation**: Custom CSS transitions and keyframe animations
-- **Responsive Design**: TailwindCSS responsive classes with custom viewport handling
-- **Type Safety**: TypeScript for type checking and developer experience
+## 🛠️ Stack Tecnológico
+- **Framework Frontend**: Next.js 15.1.0 con React 18.2.0
+- **Estilos**: TailwindCSS 3.4.1 con animaciones y efectos CSS personalizados
+- **Fuentes**: Google Fonts (Pixelify Sans) para la estética retro de texto en píxeles
+- **Visualización de Datos**: Recharts 2.15.0 para gráficos y visualizaciones interactivas
+- **Manejo de Estado**: Hooks useState y useEffect de React a nivel de componente
+- **Enrutamiento**: Next.js App Router con navegación del lado del cliente
+- **Animación**: Transiciones CSS personalizadas y animaciones con keyframes
+- **Diseño Responsive**: Clases responsive de TailwindCSS con manejo personalizado del viewport
+- **Tipado**: TypeScript para verificación de tipos y mejor experiencia de desarrollo
 
 
-## 🎵 Core Features
+## 🎵 Funcionalidades Principales
 
-<table> <tr> <td align="center"> <h3>🎮 Interactive Artist Quiz</h3> <p>Guess your top artist from multiple choices with interactive feedback</p> </td> <td align="center"> <h3>📊 Musical Taste Analysis</h3> <p>Interactive pie chart visualization of your musical preferences</p> </td> </tr> <tr> <td align="center"> <h3>💿 Top Albums Reveal</h3> <p>Interactive reveal of top albums with animated transitions</p> </td> <td align="center"> <h3>⌨️ Typewriter Messages</h3> <p>Animated typewriter effect for messages with retro cursor</p> </td> </tr> </table>
+<table> <tr> <td align="center"> <h3>🎮 Quiz Interactivo de Artistas</h3> <p>Adivina tu artista principal entre varias opciones, con retroalimentación interactiva</p> </td> <td align="center"> <h3>📊 Análisis de Gustos Musicales</h3> <p>Visualización interactiva en gráfico circular de tus preferencias musicales</p> </td> </tr> <tr> <td align="center"> <h3>💿 Revelación de Álbumes Top</h3> <p>Revelación interactiva de los álbumes principales con transiciones animadas</p> </td> <td align="center"> <h3>⌨️ Mensajes con Efecto de Máquina de Escribir</h3> <p>Efecto animado de máquina de escribir para los mensajes, con cursor retro</p> </td> </tr> </table>
 
-## 🎛️ Interactive UI Components
+## 🎛️ Componentes de UI Interactivos
 
-<table> <tr> <th colspan="2" align="center">Key Components Overview</th> </tr> <tr valign="top"> <td width="50%">
+<table> <tr> <th colspan="2" align="center">Resumen de los Componentes Clave</th> </tr> <tr valign="top"> <td width="50%">
 
 ### ArtistQuiz.tsx
 
-Interactive quiz where users guess their top artist of the year
+Quiz interactivo donde el usuario adivina cuál fue su artista principal del año
 
-**Key Features:**
+**Características Clave:**
 
-- Multiple choice artist selection
-- Interactive buttons with hover effects
-- Mystery icon that hides the answer
-- Spacebar progression after selection
+- Selección de artista por opción múltiple
+- Botones interactivos con efectos al pasar el cursor (hover)
+- Ícono de misterio que oculta la respuesta
+- Avance con la barra espaciadora tras seleccionar
 
-**Component Logic:**
+**Lógica del Componente:**
 
 ```typescript
 const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
@@ -75,15 +75,15 @@ onComplete(selectedArtist === "TAYLOR SWIFT", selectedArtist);
 
 ### HitsAnalysis.tsx
 
-Visual breakdown of user's musical taste using an interactive pie chart
+Desglose visual del gusto musical del usuario mediante un gráfico circular interactivo
 
-**Technologies:**
+**Tecnologías:**
 
-- Recharts for data visualization
-- Interactive pie segments
-- Percentage-based progress bars
+- Recharts para visualización de datos
+- Segmentos interactivos en el gráfico circular
+- Barras de progreso basadas en porcentajes
 
-**Chart Implementation:**
+**Implementación del Gráfico:**
 
 ```typescript
 const data = [
@@ -98,7 +98,7 @@ const data = [
 
 ### TopAlbums.tsx
 
-Interactive component showing top 3 albums globally
+Componente interactivo que muestra los 3 álbumes principales a nivel global
 
 ```typescript
 albums = [
@@ -108,17 +108,17 @@ albums = [
 ]
 ```
 
-**Features:**
+**Características:**
 
-- Click to reveal hidden albums
-- Transition animations
-- Auto-progress after all revealed
+- Clic para revelar álbumes ocultos
+- Animaciones de transición
+- Avance automático después de revelar todos
 
 </td> <td width="50%">
 
 ### TopArtists.tsx
 
-Reveals the top artist with animations and transitions to top 10 list
+Revela al artista principal con animaciones y transiciones hacia la lista del top 10
 
 ```typescript
 // Animation sequence with timeouts
@@ -127,16 +127,16 @@ addTimeout(() => setIsMysteryFading(true), 2000);
 addTimeout(() => setShowTaylorSwift(true), 3500);
 ```
 
-**Animations:**
+**Animaciones:**
 
-- Sequential animation timeline
-- Crown visual indicator
+- Línea de tiempo de animaciones secuenciales
+- Indicador visual de corona
 
 </td> </tr> <tr valign="top"> <td width="50%">
 
 ### TopHits.tsx
 
-Displays top 10 songs globally with responsive layout
+Muestra las 10 canciones principales a nivel global con un diseño responsive
 
 ```typescript
 useEffect(() => {
@@ -149,11 +149,11 @@ useEffect(() => {
 }, [onComplete]);
 ```
 
-**Features:**
+**Características:**
 
-- Responsive image sizing
-- Fade-in animation
-- Spacebar navigation
+- Ajuste responsive del tamaño de las imágenes
+- Animación de aparición gradual (fade-in)
+- Navegación con la barra espaciadora
 
 </td> <td width="50%">
 
@@ -161,7 +161,7 @@ useEffect(() => {
 
 ### UserStats.tsx
 
-Displays Spotify user statistics with engaging visualizations
+Muestra las estadísticas del usuario de Spotify con visualizaciones atractivas
 
 ```typescript
 return (
@@ -172,15 +172,15 @@ return (
 );
 ```
 
-**Components:**
+**Componentes:**
 
-- User ranking visualization
-- World map visualization
+- Visualización del ranking del usuario
+- Visualización de mapa mundial
 
 </td> </tr> </table>
 
 
-## 🏗️ Architecture
+## 🏗️ Arquitectura
 
 ```mermaid
 flowchart TD
@@ -228,16 +228,16 @@ flowchart TD
     style componentDisplay fill:#066A73,stroke:#2FFD2F,color:white
 ```
 
-### Component Architecture
+### Arquitectura de Componentes
 
-The application is built around a central sequence controller in `wrapped/page.tsx` that manages the flow between different states:
+La aplicación está construida alrededor de un controlador de secuencia central en `wrapped/page.tsx`, que gestiona el flujo entre los distintos estados:
 
-- **Sequence State Manager**: Controls the progression through different components and message states
-- **Message Display**: Handles typewriter effect text animations
-- **Component Display**: Conditionally renders interactive components with fade transitions
-- **Custom Hooks**: Provides sound effects, audio management, and animation control
+- **Gestor de Estado de Secuencia**: Controla el avance entre los distintos componentes y estados de mensajes
+- **Visualización de Mensajes**: Maneja las animaciones de texto con efecto de máquina de escribir
+- **Visualización de Componentes**: Renderiza condicionalmente los componentes interactivos con transiciones de aparición gradual
+- **Hooks Personalizados**: Proporcionan efectos de sonido, manejo de audio y control de animaciones
 
-## 🔄 User Flow
+## 🔄 Flujo de Usuario
 
 ```mermaid
 flowchart TD
@@ -280,60 +280,60 @@ flowchart TD
     style HitsAnalysis fill:#1C5860,stroke:#2FFD2F,color:white
 ```
 
-## 🚀 Getting Started
+## 🚀 Primeros Pasos
 
-### 📋 Prerequisites
+### 📋 Requisitos Previos
 
-- Node.js 14.x or higher
-- npm or yarn package manager
-- Minimum viewport width of 700px for optimal experience
+- Node.js 14.x o superior
+- Gestor de paquetes npm o yarn
+- Ancho de viewport mínimo de 700px para una experiencia óptima
 
-### 💾 Installation
+### 💾 Instalación
 
-- Clone the repository:
+- Clona el repositorio:
     
     ```bash
     git clone https://github.com/katjpg/90s-wrapped.git
     cd 90s-wrapped
     ```
     
-- Install dependencies:
+- Instala las dependencias:
     
     ```bash
     npm install
-    # or
+    # o
     yarn install
     ```
     
-- Run the development server:
+- Ejecuta el servidor de desarrollo:
     
     ```bash
     npm run dev
-    # or
+    # o
     yarn dev
     ```
     
-- Open your browser and navigate to:
+- Abre tu navegador y ve a:
     
     ```
     http://localhost:3000
     ```
     
 
-### 📁 Project Structure
+### 📁 Estructura del Proyecto
 
-- `/app` - Main application directory (Next.js App Router)
-    - `/components` - Reusable UI components
-    - `/hooks` - Custom React hooks
-    - `/pages` - Page components including wrapped experience
-    - `/public` - Static assets like images and sounds
-    - `globals.css` - Global CSS styles including animations
-    - `layout.tsx` - Root layout component with font loading
+- `/app` - Directorio principal de la aplicación (Next.js App Router)
+    - `/components` - Componentes reutilizables de la interfaz
+    - `/hooks` - Hooks personalizados de React
+    - `/pages` - Componentes de página, incluyendo la experiencia del "wrapped"
+    - `/public` - Recursos estáticos como imágenes y sonidos
+    - `globals.css` - Estilos CSS globales, incluyendo animaciones
+    - `layout.tsx` - Componente de layout raíz con carga de fuentes
 
-### 📝 Development Notes
+### 📝 Notas de Desarrollo
 
-- The application requires a minimum viewport width of 700px
-- Custom cursor is enabled by default and can be styled in globals.css
-- All typewriter animations timing can be adjusted in constants
-- Component sequence is defined in the `SequenceState` type
-- Additional content can be added by extending the sequence states
+- La aplicación requiere un ancho de viewport mínimo de 700px
+- El cursor personalizado está habilitado por defecto y puede personalizarse en globals.css
+- Los tiempos de todas las animaciones de máquina de escribir se pueden ajustar en las constantes
+- La secuencia de componentes está definida en el tipo `SequenceState`
+- Se puede agregar contenido adicional extendiendo los estados de la secuencia
